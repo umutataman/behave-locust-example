@@ -2,7 +2,7 @@ Feature: Ordering
   #Ordering scenarios
 
 
-  @automated
+  @web @automated
   Scenario: Cannot order from different city
     Given I open page of city 'breezanddijk' and postcode '8766'
     When I search and find restaurant 'BRT Cypress Test Restaurant'
@@ -14,5 +14,3 @@ Feature: Ordering
     When I visit restaurants that delivery my city
     Then I should see 'BRT Cypress Test Restaurant'
     And I should see 'Enschede' address in location
-
-
