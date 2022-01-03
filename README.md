@@ -1,12 +1,7 @@
 # Takeaway Assignment
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-sed do eiusmod tempor incididunt ut labore et dolore 
-magna aliqua. Ut enim ad minim veniam, quis nostrud 
-
-[Installation](#installation)<br/>
-[Running tests](#running)<br/>
-[Test Results](#results)<br/>
----
+[Installation](#installation)
+[Running tests](#running)
+[Test Results](#results)
 
 <a name="installation"/></a>
 ## Tech Stack
