@@ -6,6 +6,7 @@
 <a name="installation"/></a>
 ## Tech Stack
 [Python](python.org) - Interpreted high-level general-purpose programming language <br/>
+[Gherkin](https://docs.behat.org/en/v2.5/guides/1.gherkin.html) - Business Readable, Domain Specific Language <br/>
 [Behave](https://behave.readthedocs.io/en/stable/) - BDD(Behavior-driven development), Python style <br/>
 [Selenium](https://www.selenium.dev/) - Suite of tools for automating web browsers <br/>
 [Allure](https://github.com/allure-framework) - Test report tool <br/>
