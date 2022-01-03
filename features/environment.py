@@ -18,6 +18,7 @@ def before_all(context):
     context.app_url = context.config.userdata.get("app_url")
     context.headless = context.config.userdata.get("headless")
     # Global Delays
+    context.element_wait = 10
     context.ddos_attack_wait = 5
     context.search_wait = 4
     context.basket_after_load_wait = 2
@@ -34,16 +35,16 @@ def before_scenario(context, scenario):
         if "automated" not in scenario.effective_tags:
             scenario.skip("Scenario is not automated")
             return
-    options = webdriver.ChromeOptions()
-    options.add_argument("enable-automation")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-extensions")
-    options.add_argument("--dns-prefetch-disable")
-    options.add_argument("--disable-gpu")
-    options.add_argument("--disable-blink-features=AutomationControlled")
-    options.add_argument("start-maximized")
-    options.page_load_strategy = 'normal'
+
     if context.headless == "true":
+        options = webdriver.ChromeOptions()
+        options.add_argument("start-maximized")
+        options.add_argument("--headless")
+        options.add_experimental_option("excludeSwitches", ["enable-automation"])
+        options.add_experimental_option('useAutomationExtension', False)
+        options.add_argument("--disable-blink-features=AutomationControlled")
+        options.add_argument("ignore-certificate-errors");
+        options.add_argument("--no-sandbox")
         context.browser = webdriver.Chrome(executable_path=ChromeDriverManager().install(), chrome_options=options)
     else:
         context.browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())

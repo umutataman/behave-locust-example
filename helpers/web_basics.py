@@ -22,8 +22,8 @@ class Web:
         self.context.browser.switch_to.alert.js_alert.accept()
 
     def locate_by_data_qa(self, locator, text=""):
-        return WebDriverWait(self.context.browser, 20).until(lambda driver: driver.find_element_by_xpath(
+        return WebDriverWait(self.context.browser, self.context.element_wait).until(lambda driver: driver.find_element_by_xpath(
             f"//*[@data-qa='{locator}' and contains(.,'{text}')]"))
 
     def locate_by_name(self, locator):
-        return WebDriverWait(self.context.browser, 20).until(lambda driver: driver.find_element_by_name(locator))
+        return WebDriverWait(self.context.browser, self.context.element_wait).until(lambda driver: driver.find_element_by_name(locator))
