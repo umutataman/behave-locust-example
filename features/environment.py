@@ -3,7 +3,6 @@ import shutil
 import time
 
 import allure
-import undetected_chromedriver as uc
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 
