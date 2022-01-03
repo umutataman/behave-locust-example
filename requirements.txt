@@ -1,0 +1,14 @@
+# Automation packages
+behave
+selenium
+webdriver-manager
+allure-behave
+
+# Helper packages
+python-dotenv
+
+# Initial Python and pip packages
+parse
+parse-type
+six
+urllib3
