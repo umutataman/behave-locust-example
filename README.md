@@ -1,7 +1,7 @@
 # Takeaway Assignment
-[Installation](#installation)
-[Running tests](#running)
-[Test Results](#results)
+[Installation](#installation) |
+[Running tests](#running) | 
+[Test Results](#results) 
 
 <a name="installation"/></a>
 ## Tech Stack
