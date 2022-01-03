@@ -1,0 +1,11 @@
+{
+  "Enschede": {
+    "address": "main street",
+    "house-number": "2415",
+    "postcode": "8888AA",
+    "city": "Enschede",
+    "name": "TestUSer",
+    "phone": "1234567890",
+    "email": "testuser@test.test"
+  }
+}
