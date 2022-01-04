@@ -31,11 +31,6 @@ def before_feature(context, feature):
 
 
 def before_scenario(context, scenario):
-    if context.environment == "prod":
-        if "automated" not in scenario.effective_tags:
-            scenario.skip("Scenario is not automated")
-            return
-
     if context.headless == "true":
         options = webdriver.ChromeOptions()
         options.add_argument("start-maximized")
