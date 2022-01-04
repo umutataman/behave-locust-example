@@ -32,7 +32,7 @@ Please, follow below list starting from #1 to end.
 
 <a name="running"/></a>
 ## Running tests
-Make sure the environment is activated and rund the script bellow.
+Make sure the environment is activated and run the script bellow.
 #### Running Web tests in GUI browser mode
    ```bash
   behave -D headless=false --tags=web
