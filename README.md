@@ -1,9 +1,10 @@
 # Takeaway Assignment
 [Tech](#tech) |
 [Installation](#installation) |
-[Running Web Tests](#web) |
-[Running API Test](#api) | 
-[Running Load Test](#load) |
+[Running Tests](#running) |
+[Web Tests](#web) |
+[API Tests](#api) | 
+[Load Tests](#load) |
 [Test Results](#results) | 
 [Pipeline Run](#pipeline)  |
 [Troubleshooting](#troubleshooting) 
