@@ -1,11 +1,11 @@
 # Takeaway Assignment
 [Tech](#tech) |
 [Installation](#installation) |
-[Running Tests](#running) | 
-[Pipeline Run](#pipeline)  |
+[Running Tests](#running) |
 [API Test](#api) | 
 [Load Test](#load) |
 [Test Results](#results) | 
+[Pipeline Run](#pipeline)  |
 [Troubleshooting](#troubleshooting) 
 
 
@@ -80,6 +80,15 @@ This run can be with or without headless mode. User numbers can be change as nee
   locust -f load_tests/posts.py --users 50
    ```
 
+
+
+<a name="results"/></a>
+## Test Results
+To see the result of the run. 
+   ```bash
+  allure serve reports/allure_results/
+   ```
+
 <a name="pipeline"/></a>
 ## Pipeline Run
 To run the test on a server or pipeline step, run below 2 lines or add them pipeline step file.
@@ -94,13 +103,6 @@ Environment variables under .env_sample file and values must be added to Pipelin
    ```bash
     chmod +x ./run_scripts/api_run.sh 
     ./run_scripts/api_run.sh
-   ```
-
-<a name="results"/></a>
-## Test Results
-To see the result of the run. 
-   ```bash
-  allure serve reports/allure_results/
    ```
 
 <a name="troubleshooting"/></a>
