@@ -1,9 +1,9 @@
 # Takeaway Assignment
 [Tech](#tech) |
 [Installation](#installation) |
-[Running Tests](#running) |
-[API Test](#api) | 
-[Load Test](#load) |
+[Running Web Tests](#web) |
+[Running API Test](#api) | 
+[Running Load Test](#load) |
 [Test Results](#results) | 
 [Pipeline Run](#pipeline)  |
 [Troubleshooting](#troubleshooting) 
@@ -48,6 +48,7 @@ on Windows OS.
 <a name="running"/></a>
 ## Running Tests
 Make sure the environment is activated and run the script bellow.
+<a name="web"/></a>
 #### Running Web tests in GUI browser mode
    ```bash
   behave -D headless=false --tags=web
