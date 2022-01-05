@@ -1,8 +1,13 @@
 # Takeaway Assignment
 [Tech](#tech) |
 [Installation](#installation) |
-[Running tests](#running) | 
-[Test Results](#results) 
+[Running Tests](#running) | 
+[Pipeline test run](#pipeline) 
+[API Test](#api) | 
+[Load Test](#load) |
+[Test Results](#results) | 
+[Troubleshooting](#troubleshooting) 
+
 
 
 <a name="tech"/></a>
@@ -40,7 +45,7 @@ on Windows OS.
     ```
 
 <a name="running"/></a>
-## Running tests
+## Running Tests
 Make sure the environment is activated and run the script bellow.
 #### Running Web tests in GUI browser mode
    ```bash
@@ -50,14 +55,54 @@ Make sure the environment is activated and run the script bellow.
    ```bash
   behave -D headless=true --tags=web
    ```
+#### Running API tests
+".env" file must be added and configured(if necessary)to the project under home directory. 
+".env_sample" file can be copied and renamed to ".env".
+   ```bash
+  behave -D --tags=api
+   ```
+#### Running Sample Load tests in normal mode
+Run the 
+   ```bash
+  locust -f load_tests/posts.py 
+   ```
+#### Running Sample Load tests in headless mode
+   ```bash
+  locust -f load_tests/posts.py --headless
+   ```
+#### Running Sample Load tests with user number specified
+This run can be with or without headless mode. User numbers can be change as needed more or less users.
+Important! Scripts are to work with linux bases server. 
+#### Running Web tests
+   ```bash
+    chmod +x ./run_scripts/web_run.sh 
+    ./run_scripts/web_run.sh
+   ```
+#### Running API tests
+Environment variables under .env_sample file and values must be added to Pipeline
+   ```bash
+    chmod +x ./run_scripts/api_run.sh 
+    ./run_scripts/api_run.sh
+   ```
+
+<a name="pipeline"/></a>
+## Pipeline test run
+To run the test on a server or pipeline step, run below 2 lines or add them pipeline step file. 
+   ```bash
+  chmod +x ./run_scripts/web_run.sh 
+   ```
+
+
+
 
 <a name="results"/></a>
-## Test results
+## Test Results
 To see the result of the run. 
    ```bash
   allure serve reports/allure_results/
    ```
 
+<a name="troubleshooting"/></a>
 ## Troubleshooting
 * If virtualenv is not working in any case, please follow below steps after step 2 in the [Installation](#installation).
   * Install pipenv. 

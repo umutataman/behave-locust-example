@@ -3,8 +3,13 @@ behave
 selenium
 webdriver-manager
 allure-behave
+undetected-chromedriver
 
-# Helper packages
+# API packages
+requests
+locust
+
+# Helpers
 python-dotenv
 
 # Initial Python and pip packages
