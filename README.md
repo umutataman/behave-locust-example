@@ -2,7 +2,7 @@
 [Tech](#tech) |
 [Installation](#installation) |
 [Running Tests](#running) | 
-[Pipeline test run](#pipeline) 
+[Pipeline Run](#pipeline)  |
 [API Test](#api) | 
 [Load Test](#load) |
 [Test Results](#results) | 
@@ -16,6 +16,7 @@
 [Gherkin](https://docs.behat.org/en/v2.5/guides/1.gherkin.html) - Business Readable, Domain Specific Language <br/>
 [Behave](https://behave.readthedocs.io/en/stable/) - BDD(Behavior-driven development), Python style <br/>
 [Selenium](https://www.selenium.dev/) - Suite of tools for automating web browsers <br/>
+[Locust](https://docs.locust.io/en/stable/index.html) - Scriptable and scalable performance testing tool <br/>
 [Allure](https://github.com/allure-framework) - Test report tool <br/>
 
 <a name="installation"/></a>
@@ -55,12 +56,15 @@ Make sure the environment is activated and run the script bellow.
    ```bash
   behave -D headless=true --tags=web
    ```
+
+<a name="api"/></a>
 #### Running API tests
 ".env" file must be added and configured(if necessary)to the project under home directory. 
 ".env_sample" file can be copied and renamed to ".env".
    ```bash
   behave -D --tags=api
    ```
+<a name="load"/></a>
 #### Running Sample Load tests in normal mode
 Run the 
    ```bash
@@ -72,6 +76,13 @@ Run the
    ```
 #### Running Sample Load tests with user number specified
 This run can be with or without headless mode. User numbers can be change as needed more or less users.
+```bash
+  locust -f load_tests/posts.py --users 50
+   ```
+
+<a name="pipeline"/></a>
+## Pipeline Run
+To run the test on a server or pipeline step, run below 2 lines or add them pipeline step file.
 Important! Scripts are to work with linux bases server. 
 #### Running Web tests
    ```bash
@@ -84,16 +95,6 @@ Environment variables under .env_sample file and values must be added to Pipelin
     chmod +x ./run_scripts/api_run.sh 
     ./run_scripts/api_run.sh
    ```
-
-<a name="pipeline"/></a>
-## Pipeline test run
-To run the test on a server or pipeline step, run below 2 lines or add them pipeline step file. 
-   ```bash
-  chmod +x ./run_scripts/web_run.sh 
-   ```
-
-
-
 
 <a name="results"/></a>
 ## Test Results
