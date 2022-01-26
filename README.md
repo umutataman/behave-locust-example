@@ -1,4 +1,4 @@
-# Takeaway Assignment
+# Behave Locust Example
 [Tech](#tech) |
 [Installation](#installation) |
 [Running Tests](#running) |
